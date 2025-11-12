@@ -1,16 +1,22 @@
 % Original number
-original_number = 2413; 
+% Fou digits number with at least 2 
+% different 
+original_number = 7648; 
 
 disp(['Original number: ', num2str(original_number)])
 
+difference = 0;
+
 % First calculation (difference is returned)
-difference = kap(number); 
+difference = kap(original_number); 
 
-% Second calculation (difference is passed back in, new difference is returned)
-difference = kap(difference); 
+for i = 1:10
+    if difference ~= 6174
 
-% Second calculation (difference is passed back in, new difference is returned)
-kap(difference); 
+    % Second calculation (difference is passed back in, new difference is returned)
+        difference = kap(difference); 
+    end
+end
 
 function difference = kap(number)
     % 1. Get and sort the digits
