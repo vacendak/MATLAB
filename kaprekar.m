@@ -1,11 +1,16 @@
 % Original number
-number = 2413; 
+original_number = 2413; 
+
+disp(['Original number: ', num2str(original_number)])
 
 % First calculation (difference is returned)
 difference = kap(number); 
 
 % Second calculation (difference is passed back in, new difference is returned)
 difference = kap(difference); 
+
+% Second calculation (difference is passed back in, new difference is returned)
+kap(difference); 
 
 function difference = kap(number)
     % 1. Get and sort the digits
