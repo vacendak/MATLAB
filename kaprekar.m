@@ -1,10 +1,9 @@
 % Original number
-% Fou digits number with at least 2 
-% different 
+% Four digits number with at least 2 different 
+
+% Choose a number to check
 original_number = 7648; 
-
 disp(['Original number: ', num2str(original_number)])
-
 difference = 0;
 
 % First calculation (difference is returned)
@@ -12,7 +11,6 @@ difference = kap(original_number);
 
 for i = 1:10
     if difference ~= 6174
-
     % Second calculation (difference is passed back in, new difference is returned)
         difference = kap(difference); 
     end
@@ -31,16 +29,13 @@ function difference = kap(number)
     % 2. CONSTRUCT THE STRING
     % Formats each digit ('%d') into a single string.
     string_1 = sprintf('%d', sorted_digits_1);
-
     string_2 = sprintf('%d', sorted_digits_2);
 
     % 3. Convert to number
     largest_number = str2double(string_1);
-
     smallest_number = str2double(string_2);
 
     disp(['Reordered number (largest): ', num2str(largest_number)])
-
     disp(['Reordered number (smallest): ', num2str(smallest_number)])
 
     % 4. Calculate the difference
